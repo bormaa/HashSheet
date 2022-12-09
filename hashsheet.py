@@ -58,7 +58,6 @@ if __name__ == "__main__":
     parser.add_argument('-t','--thread', help='Specify the maximum number of threads', default=5, required=False)
 
     args = vars(parser.parse_args())
-    print(args)
     maxthreads=args["thread"]
     waittime=args["wait"]
     premium=args["premium"]
@@ -105,5 +104,13 @@ if __name__ == "__main__":
     p.map(gethashes, list((scrapedinfo,waittime,keysmap, param) for param in listwithkey))
     p.terminate()
     p.join()
-    np.savetxt(output, scrapedinfo, delimiter=',', fmt='%s')
+    md5unique=[]
+    outputlist=[]
+    for i in scrapedinfo:
+        md5=i[0]
+        if md5 not in md5unique:
+            outputlist.append(i)
+            md5unique.append(md5)
+    
+    np.savetxt(output, outputlist, delimiter=',', fmt='%s')
     print("Output file is ",output)
