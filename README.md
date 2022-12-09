@@ -5,10 +5,7 @@
         |  _  | (_| \__ \ | | |  ___) | | | |  __/  __/ |_ 
         |_| |_|\__,_|___/_| |_| |____/|_| |_|\___|\___|\__|
 
-HashSheet is a tool that helps you to get different hashes from one hash using VirusTotal API.
-Tool can be easily used and it will scan csv file for any hash and find equivalent MD5, SHA-1, SHA-256 hashes and save output to csv file
-Tool is not too fast as VirusTotal set a limit of 4 requests per minute this is why it is recommended to use multiple keys.
-
+HashSheet is a tool that helps you to get different hashes from one hash using VirusTotal API. The tool can be easily used and it will scan CSV files for any hash and find equivalent MD5, SHA-1, and SHA-256 hashes and save the output to CSV file Tool is not too fast as VirusTotal sets a limit of 4 requests per minute this is why it is recommended to use multiple keys.
 # installation
 The `requirements.txt` file should list all Python libraries that program depend on, and they will be installed using:
 
